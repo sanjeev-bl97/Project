@@ -12,7 +12,7 @@ public class ImageUploadPage extends LoginPage {
 		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/span/div/div/div/div/div/div[1]/div[1]/div/div[1]/div/div[1]/div/em")).click();
 		File file = new File("src/test/resources/Testdata/Desert.jpg");
 		driver.findElement(By.id("fileUpload")).sendKeys(file.getAbsolutePath());   //Uploads image
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		driver.findElement(By.xpath("//*[@id=\"submit\"]")).click();
 		Thread.sleep(3000);
 

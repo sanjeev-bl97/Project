@@ -1,11 +1,13 @@
 package com.naukri.pages;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 
 //Sends invalid details and clicks register button
 public class InvalidRegisterPage extends LoginPage {
 
-	public void invalidRegister() throws InterruptedException {
+	public void invalidRegister() throws InterruptedException, IOException {
 
 		driver.findElement(By.xpath("//*[@id=\"p0widget\"]/div/div[1]/div/input")).click();
 		driver.findElement(By.xpath("//*[@id=\"flowBifurcation\"]/div[2]/form/div[1]/div/button")).click();
@@ -18,6 +20,7 @@ public class InvalidRegisterPage extends LoginPage {
 		driver.findElement(By.name("basicDetailSubmit")).click();
 
 		Thread.sleep(3000);
+		screenshot("src\\test\\resources\\Screenshot\\InvalidRegister.png");
 
 		driver.close();
 

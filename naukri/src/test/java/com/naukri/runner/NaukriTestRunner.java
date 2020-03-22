@@ -8,8 +8,9 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/main/resources/feature/naukri_feature.feature",        //Feature file location
         plugin = { "pretty","html:reports/cucumber-html-report" },                      //Report generation in html format
-		glue = { "com.naukri.stepdefinition" },                                         //Stepdefinition package name
+        glue = {"com.naukri.stepdefinition"},                                          //Stepdefinition package name
 		monochrome = true)
+        
 
 public class NaukriTestRunner {
 
